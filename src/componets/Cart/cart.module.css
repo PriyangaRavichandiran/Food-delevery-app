@@ -1,51 +1,88 @@
-  .cart-items {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    max-height: 20rem;
-    overflow: auto;
-  }
-  
-  .total {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bold;
-    font-size: 1.5rem;
-    margin: 1rem 0;
-  }
-  
-  .actions {
-    text-align: right;
-  }
-  
-  .actions button {
-    font: inherit;
-    cursor: pointer;
-    background-color: transparent;
-    border: 1px solid #8a2b06;
-    padding: 0.5rem 2rem;
-    border-radius: 25px;
-    margin-left: 1rem;
-  }
-  
-  .actions .button--alt {
-    color: #8a2b06;
-    border-color: transparent;
-    background-color: transparent;
-  }
-  
-  .actions .button--alt:hover,
-  .actions .button--alt:active {
-    background-color: #fdf2e9;
-  }
-  
-  .actions .button {
-    background-color: #8a2b06;
-    color: white;
-  }
-  
-  .actions .button:hover,
-  .actions .button:active {
-    background-color: #5a1a01;
-  }
+.cartItems {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 20rem;
+  overflow-y: auto;
+}
+
+.cartItems li {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.cartItems li:last-child {
+  border-bottom: none;
+}
+
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end; /* Aligns buttons to the right */
+  margin-top: 2rem;
+}
+
+.actions button {
+  font: inherit;
+  cursor: pointer;
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  margin-left: 1rem; /* Maintains spacing between buttons */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  border: none;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.actions button:hover,
+.actions button:active {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.actions button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.actions button:disabled:hover,
+.actions button:disabled:active {
+  transform: none;
+  box-shadow: none;
+}
+
+.buttonAlt {
+  background-color: transparent;
+  color: #8a2b06;
+  border: 1px solid #8a2b06;
+}
+
+.buttonAlt:hover,
+.buttonAlt:active {
+  background-color: #ffe6dc;
+  color: #8a2b06;
+}
+
+.button {
+  background-color: #8a2b06;
+  color: white;
+}
+
+.button:hover,
+.button:active {
+  background-color: #722003;
+}
