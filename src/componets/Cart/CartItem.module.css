@@ -1,0 +1,78 @@
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #8a2b06;
+    padding: 1rem 0;
+    margin: 1rem 0;
+}
+
+.cart-item h2 {
+    margin: 0 0 0.5rem 0;
+    color: #363636;
+}
+
+.summary {
+    width: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-weight: bold;
+    color: #8a2b06;
+}
+
+.amount {
+    font-weight: bold;
+    border: 1px solid #ccc;
+    padding: 0.25rem 0.75rem;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.actions {
+    display: flex; /* Enable flexbox for the buttons */
+    justify-content: flex-end; /* Push buttons to the right */
+}
+
+.actions button {
+    font: inherit;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem; /* Adjust padding for a smaller button */
+    border-radius: 25px;
+    margin-left: 0.5rem; /* Add some space between the buttons */
+}
+
+.actions .button--alt {
+    background-color: transparent;
+    color: #8a2b06;
+    border: 1px solid #8a2b06; /* Add a border to the "Close" button */
+}
+
+.actions .button--alt:hover,
+.actions .button--alt:active {
+    background-color: #fdd8c3; /* Light background on hover */
+    color: #5a1a01;
+    border-color: #5a1a01;
+}
+
+.actions .button { /* Style the "Order" button */
+    background-color: #8a2b06;
+    color: white;
+    border: 1px solid #8a2b06;
+}
+
+.actions .button:hover,
+.actions .button:active {
+    background-color: #5a1a01;
+    border-color: #5a1a01;
+}
